@@ -8,6 +8,7 @@ const routes: Routes = [
   {path: "", component: HomeComponent},
   {path: "login", component: LoginComponent},
   {path: "home", component: HomeComponent},
+  {path: "home/:name", component: HomeComponent},
   {path: "**", component: ErrorComponent}
 ];
 

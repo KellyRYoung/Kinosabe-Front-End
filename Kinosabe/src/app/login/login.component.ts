@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
     console.log(this.userPassword);
     if(this.userUsername==="krydrita" && this.userPassword === "fish") {
       // Redirect to Home Page
-      this.router.navigate(['home'])
+      this.router.navigate(['home', this.userUsername])
       this.invalidLogin = false;
     } else {
       this.invalidLogin = true;

@@ -5,7 +5,6 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
-import { WelcomeComponent } from './welcome/welcome.component';
 import { HomeComponent } from './home/home.component';
 import { ErrorComponent } from './error/error.component';
 
@@ -13,7 +12,8 @@ import { ErrorComponent } from './error/error.component';
   declarations: [
     AppComponent,
     LoginComponent, 
-    WelcomeComponent, HomeComponent, ErrorComponent
+    HomeComponent, 
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
