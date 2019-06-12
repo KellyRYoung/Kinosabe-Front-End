@@ -19,6 +19,8 @@ export class LoginComponent implements OnInit {
   }
 
   userLogin() {
+    console.log(this.userUsername);
+    console.log(this.userPassword);
     if(this.userUsername==="krydrita" && this.userPassword === "fish") {
       this.invalidLogin = false;
     } else {
