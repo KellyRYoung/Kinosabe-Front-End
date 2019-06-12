@@ -1,12 +1,14 @@
 <fieldset>
   <legend>Login</legend>
-  <label for="input-username">username: 
+  <label for="input-username">username 
     <input type="text" #username placeholder="username" 
     [(ngModel)]="userUsername" (keyup.enter)="userLogin(); username.value=''; password.value=''"></label>
   <br>
-  <label for="input-password">password: 
+  <label for="input-password">password 
     <input type="password" #password placeholder="password" 
     [(ngModel)]="userPassword" (keyup.enter)="userLogin(); password.value=''; username.value=''"></label>
+  <br>
+  <small *ngIf="invalidLogin===true">{{errorMessage}}</small>
   <br>
   <button id="btn-login" (click)=userLogin()>Login</button>
 </fieldset>
