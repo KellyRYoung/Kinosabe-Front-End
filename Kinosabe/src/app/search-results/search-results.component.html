@@ -1,14 +1,14 @@
-<div class="movie-card">
-  <div class="movie-title">{{movieTitle}}</div>
-  <div class="movie-year">{{movieYear}}</div>
-  <div class="movie-picture"><img src="{{moviePictureURL}}"></div>
-  <div class="movie-starring">
+<div *ngFor="let movie of results" class="movie-card">
+  <div class="movie-title" *ngIf="movie.movieTitle">{{movie.movieTitle}}</div>
+  <div class="movie-year" *ngIf="movie.movieYear">{{movie.movieYear}}</div>
+  <div class="movie-picture" *ngIf="movie.moviePictureURL"><img src="{{movie.moviePictureURL}}"></div>
+  <div class="movie-starring" *ngIf="movie.movieStarring">
     <ul>
-      <li *ngFor="let starring of movieStarring">{{starring}}</li>
+      <li *ngFor="let starring of movie.movieStarring">{{starring}}</li>
     </ul>
   </div>
-  <div class="movie-rating">{{movieRating}}</div>
-  <div class="movie-genre">{{movieGenre}}</div>
-  <div class="movie-desc">{{movieDesc}}</div>
-  <div class="movie-comments-num">{{movieComments}}</div>
+  <div class="movie-rating" *ngIf="movie.movieRating">{{movie.movieRating}}</div>
+  <div class="movie-genre" *ngIf="movie.movieGenre">{{movie.movieGenre}}</div>
+  <div class="movie-desc" *ngIf="movie.movieDesc">{{movie.movieDesc}}</div>
+  <div class="movie-comments-num" *ngIf="movie.movieComments">{{movie.movieComments}}</div>
 </div>
