@@ -1,1 +1,14 @@
-
+<div class="movie-card">
+  <div class="movie-title">{{movieTitle}}</div>
+  <div class="movie-year">{{movieYear}}</div>
+  <div class="movie-picture"><img src="{{moviePictureURL}}"></div>
+  <div class="movie-starring">
+    <ul>
+      <li *ngFor="let starring of movieStarring">{{starring}}</li>
+    </ul>
+  </div>
+  <div class="movie-rating">{{movieRating}}</div>
+  <div class="movie-genre">{{movieGenre}}</div>
+  <div class="movie-desc">{{movieDesc}}</div>
+  <div class="movie-comments-num">{{movieComments}}</div>
+</div>

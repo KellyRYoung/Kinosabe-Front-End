@@ -10,6 +10,7 @@ export class SearchResultsComponent implements OnInit {
   // movieId: number;
   // movieTitle: string;
   // movieYear: number;
+  // moviePictureURL: string; 
   // movieStarring: [];
   // movieDesc: string;
   // movieRating: number;
@@ -24,6 +25,7 @@ export class SearchResultsComponent implements OnInit {
   movieRating: 100;
   movieGenre: ["comedy", "action", "superhero"];
   movieComments: ["comment1", "comment2", "comment3"];
+  // TO DO: How to display number of comments?
 
   result = [
     this.movieTitle,
@@ -32,7 +34,7 @@ export class SearchResultsComponent implements OnInit {
     this.movieRating,
     this.movieGenre,
     this.movieDesc,
-    this.movieComments.length
+    this.movieComments
   ];
   
 
