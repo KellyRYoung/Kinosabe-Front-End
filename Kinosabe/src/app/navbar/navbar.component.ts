@@ -7,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  dropdownVisible=false;
+  dropdownVisibleL=false;
+  dropdownVisibleR=false;
 
   currentUser= {
     username: "krydrita"
@@ -20,11 +21,19 @@ export class NavbarComponent implements OnInit {
   navLinksRightParent = "My Profile";
   navLinksRight = ["My Wishlist", "My Comments", "Settings"];
   
-  toggleDropdown() {
-    if (!this.dropdownVisible) {
-      this.dropdownVisible=true;
+  toggleDropdownL() {
+    if (!this.dropdownVisibleL) {
+      this.dropdownVisibleL=true;
     } else {
-      this.dropdownVisible=false;
+      this.dropdownVisibleL=false;
+    }
+  }
+
+  toggleDropdownR() {
+    if (!this.dropdownVisibleR) {
+      this.dropdownVisibleR=true;
+    } else {
+      this.dropdownVisibleR=false;
     }
   }
 
