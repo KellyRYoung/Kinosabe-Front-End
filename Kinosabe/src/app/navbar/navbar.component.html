@@ -1,11 +1,11 @@
 <nav>
   <div id="nav-left">
-    <span id="logo">{{siteName | uppercase}}</span>
     <ul id="nav-links-left">
-      <li>
-        {{navLinksLeftParent}}
-        <ul id="nav-left-dropdown">
-          <li *ngFor="let leftLink of navLinksLeft">{{leftLink}}</li>
+      <li id="logo"><a>{{siteName | uppercase}}</a></li>
+      <li class="dropdown-parent">
+        <a>{{navLinksLeftParent}}</a>
+        <ul class="dropdown">
+          <li *ngFor="let leftLink of navLinksLeft"><a>{{leftLink}}</a></li>
         </ul>
       </li>
     </ul>
@@ -16,13 +16,13 @@
   <div id="nav-right">
     <ul id="nav-links-right">
       <img *ngIf="currentUserPicUrl" src="{{currentUserPicUrl}}" alt="{{currentUser.username}}'s profile picture'">
-      <li *ngIf="!currentUser">Login</li>
-      <li *ngIf="currentUser">{{navLinksRightParent}}
-        <ul id="nav-right-dropdown">
-          <li *ngFor="let rightLink of navLinksRight">{{rightLink}}</li>
+      <li *ngIf="!currentUser"><a>Login</a></li>
+      <li class="dropdown-parent" *ngIf="currentUser"><a>{{navLinksRightParent}}</a>
+        <ul class="dropdown">
+          <li *ngFor="let rightLink of navLinksRight"><a>{{rightLink}}</a></li>
         </ul>
       </li>
-      <li *ngIf="currentUser">Logout</li>
+      <li *ngIf="currentUser"><a>Logout</a></li>
     </ul>
   </div>
 </nav>
