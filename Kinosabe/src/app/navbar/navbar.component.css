@@ -56,11 +56,12 @@ a:active {
         height: fit-content;
     }
     #search-div {
-        padding: 0 2%;
+        padding: 5px 2%;
     }
     #search-div, #search {
         display: block;
         width: 100%;
+        height: 30px;
     }
     #nav-left, #nav-right {
         display: flex;

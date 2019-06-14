@@ -30,8 +30,8 @@
   <div id="nav-left">
     <a id="logo" class="nav-link">{{siteName | uppercase}}</a>
     <div class="dropdown">
-      <a class="nav-link">{{navLinksLeftParent}}</a>
-      <div class="dropdown-links">
+      <a class="nav-link" (click)="toggleDropdown()">{{navLinksLeftParent}}</a>
+      <div class="dropdown-links" *ngIf="dropdownVisible">
         <a class="nav-link" *ngFor="let leftLink of navLinksLeft">{{leftLink}}</a>
       </div>
     </div>
@@ -43,8 +43,8 @@
     <img *ngIf="currentUserPicUrl" src="{{currentUserPicUrl}}" alt="{{currentUser.username}}'s profile picture'">
     <a class="nav-link" *ngIf="!currentUser">Login</a>
     <div class="dropdown">
-      <a class="nav-link" *ngIf="currentUser">{{navLinksRightParent}}</a>
-      <div class="dropdown-links">
+      <a class="nav-link" *ngIf="currentUser" (click)="toggleDropdown()">{{navLinksRightParent}}</a>
+      <div class="dropdown-links" *ngIf="dropdownVisible">
         <a class="nav-link" *ngFor="let rightLink of navLinksRight">{{rightLink}}</a>
       </div>
     </div>
