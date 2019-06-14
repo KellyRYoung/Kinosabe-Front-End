@@ -25,22 +25,28 @@
                     rgba(56,62,73,1)
     Black:          #191C21
                     rgba(25,28,33,1)
+    Dark Blue:      #002E7A;
+                    rgba(0,46,122,1)
 
 -------------------------------------------------------------------------
 -------------------------------------------------------------------------
     CODE FOR MOBILE MENU (vertical) 
 */
+
+
+
 nav {
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 12px 2%;
+    padding: 0 2%;
     height: auto;
     background-image: linear-gradient(to left, rgba(0,172,211,1), rgba(81,255,208,1));
     align-self: center;
     width: 30%;
     position: fixed;
     overflow: auto;
+
 }
 
 #search-div {
@@ -56,7 +62,8 @@ a {
 }
 
 a:hover {
-    background-color: gray;
+    background-color: rgba(39,238,255,0.7);
+    color: rgba(56,62,73,1);
 }
 a:active {
     background-color: black;
@@ -77,13 +84,14 @@ a:active {
         width: 100%;
         height: 65px;
         overflow: visible;
-
+        position: static;
     }
     nav>div>a, nav>div>div>a {
-        height: fit-content;
+        height: 100%;
+        padding-top: 24px;
     }
     #search-div {
-        padding: 5px 2%;
+        padding: 17px 2%;
     }
     #search-div, #search {
         display: block;
@@ -96,7 +104,7 @@ a:active {
     .nav-link {
         min-width: 120px;
         padding: 10px;
-        margin: 2px;
+        margin: 0;
     }
     .dropdown-links .nav-link {
         background-color: rgba(0,172,211,1);
