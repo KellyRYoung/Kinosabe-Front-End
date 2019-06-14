@@ -8,13 +8,16 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { ErrorComponent } from './error/error.component';
 import { SearchResultsComponent } from './search-results/search-results.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent, 
     HomeComponent, 
-    ErrorComponent, SearchResultsComponent
+    ErrorComponent, 
+    SearchResultsComponent, 
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,

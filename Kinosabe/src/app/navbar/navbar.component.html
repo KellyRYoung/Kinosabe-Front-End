@@ -1,0 +1,28 @@
+<nav>
+  <div id="nav-left">
+    <span id="logo">{{siteName | uppercase}}</span>
+    <ul id="nav-links-left">
+      <li>
+        {{navLinksLeftParent}}
+        <ul>
+          <li *ngFor="let leftLink of navLinksLeft">{{leftLink}}</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div>
+    <input type="text" placeholder="search" [(ngModel)]="name">
+  </div>
+  <div id="nav-right">
+    <ul id="nav-links-right">
+      <img *ngIf="currentUserPicUrl" src="{{currentUserPicUrl}}" alt="{{currentUser.username}}'s profile picture'">
+      <li *ngIf="!currentUser">Login</li>
+      <li *ngIf="currentUser">{{navLinksRightParent}}
+        <ul>
+          <li *ngFor="let rightLink of navLinksRight">{{rightLink}}</li>
+        </ul>
+      </li>
+      <li *ngIf="currentUser">Logout</li>
+    </ul>
+  </div>
+</nav>
