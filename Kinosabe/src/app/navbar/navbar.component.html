@@ -4,21 +4,21 @@
     <ul id="nav-links-left">
       <li>
         {{navLinksLeftParent}}
-        <ul>
+        <ul id="nav-left-dropdown">
           <li *ngFor="let leftLink of navLinksLeft">{{leftLink}}</li>
         </ul>
       </li>
     </ul>
   </div>
-  <div>
-    <input type="text" placeholder="search" [(ngModel)]="name">
+  <div id="search-div">
+    <input id="search" type="text" placeholder="search" [(ngModel)]="name">
   </div>
   <div id="nav-right">
     <ul id="nav-links-right">
       <img *ngIf="currentUserPicUrl" src="{{currentUserPicUrl}}" alt="{{currentUser.username}}'s profile picture'">
       <li *ngIf="!currentUser">Login</li>
       <li *ngIf="currentUser">{{navLinksRightParent}}
-        <ul>
+        <ul id="nav-right-dropdown">
           <li *ngFor="let rightLink of navLinksRight">{{rightLink}}</li>
         </ul>
       </li>
