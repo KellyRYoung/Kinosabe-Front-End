@@ -1,7 +1,6 @@
-<nav>
+<!-- <nav>
   <div id="nav-left">
     <ul id="nav-links-left">
-      <li id="logo"><a>{{siteName | uppercase}}</a></li>
       <li class="dropdown-parent">
         <a>{{navLinksLeftParent}}</a>
         <ul class="dropdown">
@@ -24,5 +23,31 @@
       </li>
       <li *ngIf="currentUser"><a>Logout</a></li>
     </ul>
+  </div>
+</nav> -->
+
+<nav>
+  <div id="nav-left">
+    <a id="logo" class="nav-link">{{siteName | uppercase}}</a>
+    <div class="dropdown">
+      <a class="nav-link">{{navLinksLeftParent}}</a>
+      <div class="dropdown-links">
+        <a class="nav-link" *ngFor="let leftLink of navLinksLeft">{{leftLink}}</a>
+      </div>
+    </div>
+  </div>
+  <div id="search-div">
+    <input id="search" type="text" placeholder="search" [(ngModel)]="name">
+  </div>
+  <div id="nav-right">
+    <img *ngIf="currentUserPicUrl" src="{{currentUserPicUrl}}" alt="{{currentUser.username}}'s profile picture'">
+    <a class="nav-link" *ngIf="!currentUser">Login</a>
+    <div class="dropdown">
+      <a class="nav-link" *ngIf="currentUser">{{navLinksRightParent}}</a>
+      <div class="dropdown-links">
+        <a class="nav-link" *ngFor="let rightLink of navLinksRight">{{rightLink}}</a>
+      </div>
+    </div>
+    <a class="nav-link" *ngIf="currentUser">Logout</a>
   </div>
 </nav>

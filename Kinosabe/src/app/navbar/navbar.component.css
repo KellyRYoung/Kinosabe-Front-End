@@ -1,39 +1,37 @@
+/* 
+------------------------------------------------------------
+    CODE FOR MOBILE MENU (vertical) 
+*/
 nav {
     width: 100%;
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
     padding: 12px 2%;
     height: 70px;
     background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf   100%);
     align-self: center;
+    width: 30%;
+    height: auto;
+    position: fixed;
+    overflow: auto;
 }
 #search-div {
     display: none;
 }
-/* nav {
-    width: 30%;
-    height: 100%;
-    position: fixed;
-    overflow: auto;
-} */
-li {
+a {
+    display: block;
     border: 1px solid red;
     padding: 0 5%;
-}
-li a {
-    display: block; 
-    border-bottom: 2px solid blue;
     flex-basis: 150px;
     min-height: 40px;
     cursor: pointer;
     text-align: center;
-    padding: 2%;
 }
-li a:hover {
+
+a:hover {
     background-color: gray;
 }
-li a:active {
+a:active {
     background-color: black;
     color: white;
 }
@@ -41,8 +39,34 @@ li a:active {
     flex-direction: column;
 }
 
+/*
+------------------------------------------------------
+    CODE FOR TABLET & DESKTOP MENU (horizontal)
+*/
 @media screen and (min-width: 600px) {
     nav {
         flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        /* height: 70px; */
+        /* overflow: visible; */
+
+    }
+    nav>div>a, nav>div>div>a {
+        height: fit-content;
+    }
+    #search-div {
+        padding: 0 2%;
+    }
+    #search-div, #search {
+        display: block;
+        width: 100%;
+    }
+    #nav-left, #nav-right {
+        display: flex;
+    }
+    .nav-link {
+        min-width: 120px;
+        padding: 10px;
     }
 }
