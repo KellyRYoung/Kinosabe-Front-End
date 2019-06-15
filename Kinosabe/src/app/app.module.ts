@@ -10,6 +10,7 @@ import { ErrorComponent } from './error/error.component';
 import { SearchResultsComponent } from './search-results/search-results.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HeaderComponent } from './header/header.component';
+import { MovieCardComponent } from './movie-card/movie-card.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { HeaderComponent } from './header/header.component';
     HomeComponent, 
     ErrorComponent, 
     SearchResultsComponent, 
-    NavbarComponent, HeaderComponent,
+    NavbarComponent, HeaderComponent, MovieCardComponent,
   ],
   imports: [
     BrowserModule,

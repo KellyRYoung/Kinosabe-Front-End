@@ -1,0 +1,35 @@
+<div class="flex-container">
+
+
+  <div *ngFor="let movie of results" class="movie-card">
+    <div class="movie-picture" *ngIf="movie.moviePictureURL"><img src="{{movie.moviePictureURL}}"></div>
+    <div class="movie-picture-window" *ngIf="movie.moviePictureURL" style="background-image: url('')"></div>
+    <span class="movie-title" *ngIf="movie.movieTitle">{{movie.movieTitle}}</span>
+    <span class="movie-year" *ngIf="movie.movieYear">&nbsp;|&nbsp;{{movie.movieYear}}</span>
+    <span class="movie-genre" *ngIf="movie.movieGenre"><span *ngFor="let genre of movie.movieGenre">{{genre}}&nbsp;</span></span>
+    <span class="movie-starring" *ngIf="movie.movieStarring">
+      <ul>
+        <li *ngFor="let starring of movie.movieStarring">{{starring}}</li>
+      </ul>
+    </span>
+    <span class="movie-rating" *ngIf="movie.movieRating">{{movie.movieRating}}</span>
+    <span class="movie-desc" *ngIf="movie.movieDesc">{{movie.movieDesc}}</span>
+    <span class="movie-comments-num" *ngIf="movie.movieComments">{{movie.movieComments}}</span>
+  </div>
+
+  <div *ngFor="let movie of results" class="movie-card">
+    <div class="movie-picture" *ngIf="movie.moviePictureURL"><img src="{{movie.moviePictureURL}}"></div>
+    <span class="movie-title" *ngIf="movie.movieTitle">{{movie.movieTitle}}</span>
+    <span class="movie-year" *ngIf="movie.movieYear">{{movie.movieYear}}</span>
+    <span class="movie-genre" *ngIf="movie.movieGenre">{{movie.movieGenre}}</span>
+    <span class="movie-starring" *ngIf="movie.movieStarring">
+      <ul>
+        <li *ngFor="let starring of movie.movieStarring">{{starring}}</li>
+      </ul>
+    </span>
+    <span class="movie-rating" *ngIf="movie.movieRating">{{movie.movieRating}}</span>
+    <span class="movie-desc" *ngIf="movie.movieDesc">{{movie.movieDesc}}</span>
+    <span class="movie-comments-num" *ngIf="movie.movieComments">{{movie.movieComments}}</span>
+  </div>
+
+</div>
