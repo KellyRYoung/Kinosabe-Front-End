@@ -35,15 +35,17 @@
 body {
     width: 100vw;
     height: 100vh;
-    font-family: sans-serif;
+    font-family: 'Raleway', sans-serif;
     color: rgba(255,255,255,1);
-    background-image: linear-gradient(rgba(56,62,73,1),rgba(25,28,33,1))
+    background-image: linear-gradient(rgba(56,62,73,1),rgba(25,28,33,1));
+    background-attachment: fixed;
 }
 
 ul {
     list-style: none;
 }
 input[type="text"], input[type="password"], input[type="email"] {
+    font-family: 'Raleway', sans-serif;
     border-radius: 30px;
     text-align: center;
     min-height: 25px;
