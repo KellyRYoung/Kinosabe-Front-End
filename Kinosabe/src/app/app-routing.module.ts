@@ -5,6 +5,7 @@ import { HomeComponent } from './home/home.component';
 import { ErrorComponent } from './error/error.component';
 import { SearchResultsComponent } from './search-results/search-results.component';
 import { MovieCardComponent } from './movie-card/movie-card.component';
+import { MaterialDemoComponent } from './material-demo/material-demo.component';
 
 const routes: Routes = [
   {path: "", component: HomeComponent},
@@ -14,6 +15,7 @@ const routes: Routes = [
   //{path: "search/:query", component: SearchResultsComponent},
   {path: "search", component: SearchResultsComponent},
   {path: "movie-card", component: MovieCardComponent},
+  {path: "material-demo", component: MaterialDemoComponent},
   {path: "**", component: ErrorComponent}
 ];
 

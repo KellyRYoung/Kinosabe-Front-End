@@ -11,6 +11,9 @@ import { SearchResultsComponent } from './search-results/search-results.componen
 import { NavbarComponent } from './navbar/navbar.component';
 import { HeaderComponent } from './header/header.component';
 import { MovieCardComponent } from './movie-card/movie-card.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material/material.module';
+import { MaterialDemoComponent } from './material-demo/material-demo.component';
 
 @NgModule({
   declarations: [
@@ -19,12 +22,16 @@ import { MovieCardComponent } from './movie-card/movie-card.component';
     HomeComponent, 
     ErrorComponent, 
     SearchResultsComponent, 
-    NavbarComponent, HeaderComponent, MovieCardComponent,
+    NavbarComponent, 
+    HeaderComponent, 
+    MovieCardComponent, MaterialDemoComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
