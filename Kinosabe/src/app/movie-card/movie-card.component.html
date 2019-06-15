@@ -1,5 +1,23 @@
-<div class="flex-container">
+<mat-card>
+  <mat-card-title>Batman</mat-card-title>
 
+  <mat-card-content>hello</mat-card-content>
+  <img mat-card-avatar src="https://upload.wikimedia.org/wikipedia/en/thumb/6/69/Batman1966Poster.jpg/220px-Batman1966Poster.jpg">
+  <!-- <img mat-card-image src="https://upload.wikimedia.org/wikipedia/en/thumb/6/69/Batman1966Poster.jpg/220px-Batman1966Poster.jpg"> -->
+  <mat-card-actions align="end"><button mat-raised-button color="primary">View Movie&nbsp;<mat-icon>arrow_forward</mat-icon></button></mat-card-actions>
+</mat-card>
+<mat-card>
+  <mat-card-title-group>
+    <img mat-card-md-image src="https://upload.wikimedia.org/wikipedia/en/thumb/6/69/Batman1966Poster.jpg/220px-Batman1966Poster.jpg">
+    <mat-card-title>Batman</mat-card-title>
+    <mat-card-content>hello</mat-card-content>
+    </mat-card-title-group>
+    <!-- <img mat-card-image src="https://upload.wikimedia.org/wikipedia/en/thumb/6/69/Batman1966Poster.jpg/220px-Batman1966Poster.jpg"> -->
+    <mat-card-actions align="end"><button mat-raised-button color="primary">View Movie&nbsp;<mat-icon>arrow_forward</mat-icon></button></mat-card-actions>
+  </mat-card>
+
+
+<div class="flex-container">
 
   <div *ngFor="let movie of results" class="movie-card">
     <div class="movie-picture" *ngIf="movie.moviePictureURL"><img src="{{movie.moviePictureURL}}"></div>
