@@ -1,0 +1,22 @@
+.search {
+    flex: 1 1 auto;
+    text-align: center;
+}
+button {
+    height: 100%
+}
+.search {
+    height: 35%;
+    border-radius: 15px;
+    border-style: none;
+    background-color: rgba(255,255,255,0.7);
+}
+.search::placeholder {
+    color: rgba(0,172,211,1);
+}
+.search:hover {
+    background-color: white;
+}
+.navbar {
+    
+}

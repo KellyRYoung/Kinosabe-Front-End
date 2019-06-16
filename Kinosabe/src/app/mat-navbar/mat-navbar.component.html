@@ -1,3 +1,12 @@
-<p>
-  mat-navbar works!
-</p>
+<mat-toolbar color="primary" class="navbar">
+  <div>
+    <button mat-button>{{siteName|uppercase}}</button>
+      <button mat-button>Browse</button>
+  </div>
+    <input type="search" placeholder="search for movies" class="search">
+  <div>
+    
+    <button mat-button>My Profile</button>
+    <button mat-button>Logout</button>
+  </div>
+</mat-toolbar>
