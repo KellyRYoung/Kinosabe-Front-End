@@ -40,9 +40,21 @@ body {
     background-image: linear-gradient(rgba(56,62,73,1),rgba(25,28,33,1));
     background-attachment: fixed;
 }
-
+a {
+    text-decoration: none;
+}
+a:visited {
+    color: inherit;
+}
 ul {
     list-style: none;
+}
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 15px;
 }
 /* input[type="text"], input[type="password"], input[type="email"] {
     font-family: 'Raleway', sans-serif;
