@@ -1,53 +1,24 @@
-<mat-card>
-  <mat-card-title>Batman</mat-card-title>
 
-  <mat-card-content>hello</mat-card-content>
-  <img mat-card-avatar src="https://upload.wikimedia.org/wikipedia/en/thumb/6/69/Batman1966Poster.jpg/220px-Batman1966Poster.jpg">
-  <!-- <img mat-card-image src="https://upload.wikimedia.org/wikipedia/en/thumb/6/69/Batman1966Poster.jpg/220px-Batman1966Poster.jpg"> -->
-  <mat-card-actions align="end"><button mat-raised-button color="primary">View Movie&nbsp;<mat-icon>arrow_forward</mat-icon></button></mat-card-actions>
-</mat-card>
-<mat-card>
-  <mat-card-title-group>
-    <img mat-card-md-image src="https://upload.wikimedia.org/wikipedia/en/thumb/6/69/Batman1966Poster.jpg/220px-Batman1966Poster.jpg">
-    <mat-card-title>Batman</mat-card-title>
-    <mat-card-content>hello</mat-card-content>
-    </mat-card-title-group>
-    <!-- <img mat-card-image src="https://upload.wikimedia.org/wikipedia/en/thumb/6/69/Batman1966Poster.jpg/220px-Batman1966Poster.jpg"> -->
-    <mat-card-actions align="end"><button mat-raised-button color="primary">View Movie&nbsp;<mat-icon>arrow_forward</mat-icon></button></mat-card-actions>
-  </mat-card>
 
 
 <div class="flex-container">
 
-  <div *ngFor="let movie of results" class="movie-card">
-    <div class="movie-picture" *ngIf="movie.moviePictureURL"><img src="{{movie.moviePictureURL}}"></div>
-    <div class="movie-picture-window" *ngIf="movie.moviePictureURL" style="background-image: url('')"></div>
-    <span class="movie-title" *ngIf="movie.movieTitle">{{movie.movieTitle}}</span>
-    <span class="movie-year" *ngIf="movie.movieYear">&nbsp;|&nbsp;{{movie.movieYear}}</span>
-    <span class="movie-genre" *ngIf="movie.movieGenre"><span *ngFor="let genre of movie.movieGenre">{{genre}}&nbsp;</span></span>
-    <span class="movie-starring" *ngIf="movie.movieStarring">
-      <ul>
-        <li *ngFor="let starring of movie.movieStarring">{{starring}}</li>
-      </ul>
-    </span>
-    <span class="movie-rating" *ngIf="movie.movieRating">{{movie.movieRating}}</span>
-    <span class="movie-desc" *ngIf="movie.movieDesc">{{movie.movieDesc}}</span>
-    <span class="movie-comments-num" *ngIf="movie.movieComments">{{movie.movieComments}}</span>
-  </div>
+<mat-card role="group" tabindex="0">
+  <mat-card-title-group>
+    <mat-card-title>Batman</mat-card-title>
+    <mat-card-subtitle>1966 &nbsp;|&nbsp; comedy&nbsp; action&nbsp; superhero</mat-card-subtitle>
+  </mat-card-title-group>
+    <div class="movie-card-image-div">
+      <img class="mat-card-md-image" mat-card-md-image src="https://upload.wikimedia.org/wikipedia/en/thumb/6/69/Batman1966Poster.jpg/220px-Batman1966Poster.jpg">
+    </div>
+    <mat-card-subtitle>Directed by: William Dozier</mat-card-subtitle>
+      <mat-card-subtitle>Starring: Adam West, Burt Ward, Lee Meriwether, Cesar Romero, Burgess Meredith, Frank Gorshin</mat-card-subtitle>
+    <mat-card-content>
+      For The First Time On The Motion Picture Screen In Color! Adam West as Batman and Burt Ward as Robin Together With All Their Fantastic Derring-Do And Their Dastardly Villians, Too!
+    </mat-card-content>
+    <mat-card-actions align="end"><mat-icon class="comments-icon" matBadge="3" matBadgePosition="below after" matBadgeColor="accent">chat_bubble_outline</mat-icon><button mat-raised-button color="primary">View More&nbsp;<mat-icon>arrow_forward</mat-icon></button></mat-card-actions>
+  </mat-card>
 
-  <div *ngFor="let movie of results" class="movie-card">
-    <div class="movie-picture" *ngIf="movie.moviePictureURL"><img src="{{movie.moviePictureURL}}"></div>
-    <span class="movie-title" *ngIf="movie.movieTitle">{{movie.movieTitle}}</span>
-    <span class="movie-year" *ngIf="movie.movieYear">{{movie.movieYear}}</span>
-    <span class="movie-genre" *ngIf="movie.movieGenre">{{movie.movieGenre}}</span>
-    <span class="movie-starring" *ngIf="movie.movieStarring">
-      <ul>
-        <li *ngFor="let starring of movie.movieStarring">{{starring}}</li>
-      </ul>
-    </span>
-    <span class="movie-rating" *ngIf="movie.movieRating">{{movie.movieRating}}</span>
-    <span class="movie-desc" *ngIf="movie.movieDesc">{{movie.movieDesc}}</span>
-    <span class="movie-comments-num" *ngIf="movie.movieComments">{{movie.movieComments}}</span>
-  </div>
+  
 
 </div>
