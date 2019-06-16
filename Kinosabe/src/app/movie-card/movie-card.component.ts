@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MovieCardComponent implements OnInit {
 
+// title, description, wikipedia, youtube
+
   movies = [
     {
       id: 771923,

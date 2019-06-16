@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +17,7 @@ import { MaterialDemoComponent } from './material-demo/material-demo.component';
 import { MatNavbarComponent } from './mat-navbar/mat-navbar.component';
 import { RegisterComponent } from './register/register.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,14 +27,17 @@ import { RegisterComponent } from './register/register.component';
     SearchResultsComponent, 
     NavbarComponent, 
     HeaderComponent, 
-    MovieCardComponent, MaterialDemoComponent, MatNavbarComponent, RegisterComponent,
+    MovieCardComponent, 
+    MaterialDemoComponent, 
+    MatNavbarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

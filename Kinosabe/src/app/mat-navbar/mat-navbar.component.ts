@@ -7,6 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MatNavbarComponent implements OnInit {
 
+  siteName = "Kinosabe";
+  loggedIn = true;
+
+  logout() {
+    this.loggedIn = false;
+  }
+
   constructor() { }
 
   ngOnInit() {
