@@ -1,0 +1,28 @@
+#login {
+    margin: auto;
+    width: 40%;
+    margin-top: 1vh;
+    min-width: 300px;
+}
+form {
+    margin: auto;
+    text-align: center;
+    width: 100%;
+}
+mat-form-field {
+    width: 60%;
+    min-width: 225px;    
+}
+.mat-headline {
+    margin-top: 25px;
+}
+input {
+    width: 100%;
+}
+button {
+    width: 40%;
+    margin-top: 15px;
+}
+a {
+    margin-bottom: 25px;
+}
