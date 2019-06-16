@@ -15,6 +15,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { MaterialDemoComponent } from './material-demo/material-demo.component';
 import { MatNavbarComponent } from './mat-navbar/mat-navbar.component';
+import { SimpleMovieCardComponent } from './simple-movie-card/simple-movie-card.component';
+import { CommentCardComponent } from './comment-card/comment-card.component';
 
 
 @NgModule({
@@ -28,7 +30,7 @@ import { MatNavbarComponent } from './mat-navbar/mat-navbar.component';
     HeaderComponent, 
     MovieCardComponent, 
     MaterialDemoComponent, 
-    MatNavbarComponent
+    MatNavbarComponent, SimpleMovieCardComponent, CommentCardComponent
   ],
   imports: [
     BrowserModule,
