@@ -1,0 +1,53 @@
+<!-- <nav>
+  <div id="nav-left">
+    <ul id="nav-links-left">
+      <li class="dropdown-parent">
+        <a>{{navLinksLeftParent}}</a>
+        <ul class="dropdown">
+          <li *ngFor="let leftLink of navLinksLeft"><a>{{leftLink}}</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div id="search-div">
+    <input id="search" type="text" placeholder="search" [(ngModel)]="name">
+  </div>
+  <div id="nav-right">
+    <ul id="nav-links-right">
+      <img *ngIf="currentUserPicUrl" src="{{currentUserPicUrl}}" alt="{{currentUser.username}}'s profile picture'">
+      <li *ngIf="!currentUser"><a>Login</a></li>
+      <li class="dropdown-parent" *ngIf="currentUser"><a>{{navLinksRightParent}}</a>
+        <ul class="dropdown">
+          <li *ngFor="let rightLink of navLinksRight"><a>{{rightLink}}</a></li>
+        </ul>
+      </li>
+      <li *ngIf="currentUser"><a>Logout</a></li>
+    </ul>
+  </div>
+</nav> -->
+
+<nav>
+  <div id="nav-left">
+    <a id="logo" class="nav-link">{{siteName | uppercase}}</a>
+    <div class="dropdown">
+      <a class="nav-link" (click)="toggleDropdownL()">{{navLinksLeftParent}}</a>
+      <div class="dropdown-links" *ngIf="dropdownVisibleL">
+        <a class="nav-link" *ngFor="let leftLink of navLinksLeft">{{leftLink}}</a>
+      </div>
+    </div>
+  </div>
+  <div id="search-div">
+    <input id="search" type="text" placeholder="search" [(ngModel)]="name">
+  </div>
+  <div id="nav-right">
+    <img *ngIf="currentUserPicUrl" src="{{currentUserPicUrl}}" alt="{{currentUser.username}}'s profile picture'">
+    <a class="nav-link" *ngIf="!currentUser">Login</a>
+    <div class="dropdown">
+      <a class="nav-link" *ngIf="currentUser" (click)="toggleDropdownR()">{{navLinksRightParent}}</a>
+      <div class="dropdown-links" *ngIf="dropdownVisibleR">
+        <a class="nav-link" *ngFor="let rightLink of navLinksRight">{{rightLink}}</a>
+      </div>
+    </div>
+    <a class="nav-link" *ngIf="currentUser">Logout</a>
+  </div>
+</nav>

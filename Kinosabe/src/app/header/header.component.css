@@ -1,0 +1,76 @@
+
+/* 
+
+    NOTE: rgba(?,?,?,?)
+            first ? is red value (0-255)
+            second ? is green value (0-255)
+            third ? is blue value (0-255)
+            fourth ? is "alpha" (0-1) 
+                - controls the opacity/transparency
+                - 0 is invisible
+                - 0.5 is 50% opacity
+                - 1 is 100% opaque/visible
+
+            So, you'll see me using the rgba() a lot instead of #RRGGBB,
+                because then if I want to change the opacity, I only have
+                to change the last number.
+
+    Colors:
+    Turquoise:      #51FFD0
+                    rgba(81,255,208,1)
+    Cerulean:       #00ACD3
+                    rgba(0,172,211,1)
+    Electric Blue:  #27EEFF
+                    rgba(39,238,255,1)
+    Gray:           #383E49
+                    rgba(56,62,73,1)
+    Black:          #191C21
+                    rgba(25,28,33,1)
+*/
+/*
+Autour One
+Averia Sans
+Sniglet
+Flamenco*
+Londrina Solid
+Chewy
+Atma*
+Chelsea Market
+Finger Paint*
+Fredericka the Great
+Londrina Sketech
+Gugi
+*/
+
+#site-title {
+    font-family: 'Sniglet';
+    text-align: center;
+    font-size: 10vw;
+    line-height: 20vh;
+    text-shadow: 
+    0 0 20px rgba(0,0,0,0.3),
+    0 0 30px rgba(0,0,0,0.3),
+    0 0 40px rgba(0,0,0,0.3),
+    0 0 10px rgba(0,0,0,0.3),
+    0 0 50px rgba(0,0,0,0.3),
+    0 0 60px rgba(0,0,0,0.3),
+    0 0 70px rgba(0,0,0,0.3),
+    0 0 80px rgba(0,0,0,0.3)
+    ;
+}
+
+#header-bg {
+    /*
+    blurred lights: 
+    background-image: url('https://images.unsplash.com/6/blurred_lines.jpeg?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80'); */
+    /* 
+    Shadowy film real:
+    background-image: url('https://images.unsplash.com/photo-1505775561242-727b7fba20f0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80'); */
+    background-size: cover;
+    background-position: center; 
+    height: 20vh;
+}
+/* #header-overlay {
+    background-color: rgba(0,0,0,0.7);
+    box-shadow: 0 2px 0 rgba(0,0,0,0.7);
+} */
