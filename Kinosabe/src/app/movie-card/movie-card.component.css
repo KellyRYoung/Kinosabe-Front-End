@@ -50,6 +50,7 @@ mat-card {
     float: left;
     margin-right: 15px;
     margin-bottom: 15px;
+    max-width: 200px;
 }
 .comments-icon {
     margin-right: 15px;
