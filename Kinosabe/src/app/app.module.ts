@@ -15,6 +15,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { MaterialDemoComponent } from './material-demo/material-demo.component';
 import { MatNavbarComponent } from './mat-navbar/mat-navbar.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,7 @@ import { MatNavbarComponent } from './mat-navbar/mat-navbar.component';
     SearchResultsComponent, 
     NavbarComponent, 
     HeaderComponent, 
-    MovieCardComponent, MaterialDemoComponent, MatNavbarComponent,
+    MovieCardComponent, MaterialDemoComponent, MatNavbarComponent, RegisterComponent,
   ],
   imports: [
     BrowserModule,
