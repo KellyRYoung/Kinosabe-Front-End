@@ -1,12 +1,29 @@
 <mat-toolbar color="primary" class="navbar">
+
   <div>
-    <button mat-button>{{siteName|uppercase}}</button>
-      <button mat-button>Browse</button>
+    <a href="./home" mat-button>{{siteName|uppercase}}</a>
+
+    <button mat-button [matMenuTriggerFor]="browseMenu">Browse</button>
+      <mat-menu #browseMenu="matMenu">
+        <a href="./whats-trending" mat-menu-item>What's Trending</a>
+        <a href="./new-releases" mat-menu-item>New Releases</a>
+        <a href="./browse-by-genre" mat-menu-item>Browse by Genre</a>
+        <a href="./surprise-me" mat-menu-item disabled>Surprise Me!</a>
+      </mat-menu>  
+
   </div>
+
     <input type="search" placeholder="search for movies" class="search">
+  
   <div>
-    
-    <button mat-button>My Profile</button>
-    <button mat-button>Logout</button>
+    <a href="./login" *ngIf="!this.loggedIn" mat-button>Login</a>
+    <button mat-button [matMenuTriggerFor]="profileMenu" *ngIf="this.loggedIn">My Account</button>
+    <mat-menu #profileMenu="matMenu">
+        <a href="./my-dashboard" mat-menu-item>My Dashboard</a>
+        <a href="./my-wishlist" mat-menu-item>My Wishlist</a>
+        <a href="./my-comments" mat-menu-item>My Comments</a>
+      </mat-menu>
+    <a href="./register" *ngIf="!this.loggedIn" mat-button>Sign up</a>
+    <button mat-button *ngIf="this.loggedIn" (click)="logout()">Logout</button>
   </div>
 </mat-toolbar>
