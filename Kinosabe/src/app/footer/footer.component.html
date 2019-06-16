@@ -1,0 +1,47 @@
+<div class="flex-container">
+    <div class="mat-headline links">
+      <a href="./about-us" menu-item>About Us</a>
+      <br>
+      <a href="./contact-us" menu-item>Contact Us</a>
+      <br>
+      <a href="./privacy-policy" menu-item>Privacy Policy</a>
+      <br>
+      <a href="./terms-and-conditions" menu-item disabled>Terms and Conditions</a>
+      <br>
+    </div> 
+</div>
+<div class="mat-headline quote">{{ movieQuote }}
+</div>
+<mat-toolbar>Copyright <mat-icon>copyright</mat-icon> Kinosabe - 2019</mat-toolbar>
+
+<!--<div>
+    Links go here (About Us, Contact Us, Privacy Policy and Terms & Conditions)
+    </div>
+    
+    <div>
+    Shrek quote goes here
+    -- in the TS file, make a variable called "movieQuote," make it a string literal of a Shrek quote, then in the HTML put {{movieQuote}}
+    </div>
+    
+    <mat-toolbar>Copyright <mat-icon>copyright</mat-icon> Kinosabe - 2019</mat-toolbar>
+
+-->
+
+<!--HTML:
+<div class="flex-container">
+     <div class="links">
+          About Us, Contact Us, etc.
+     </div> end of the links div
+     <div class="quote">
+        Shrek quote
+   </div> end of the quote div 
+</div>   end of the flex-container div -->
+
+<!--CSS:
+/*
+Flex-container css is not necessary, because I've already put it in the styles.css, which applies to all components. 
+*/
+.links, .quote {  // .links and .quote will both get these styles
+   flex-basis: 300px;  // this is similar to min-width when using flexbox
+   flex-grow: 1;  // this tells it to automatically grow to take up extra space
+}-->

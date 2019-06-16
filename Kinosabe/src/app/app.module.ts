@@ -16,6 +16,7 @@ import { MaterialModule } from './material/material.module';
 import { MaterialDemoComponent } from './material-demo/material-demo.component';
 import { MatNavbarComponent } from './mat-navbar/mat-navbar.component';
 import { RegisterComponent } from './register/register.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -29,7 +30,7 @@ import { RegisterComponent } from './register/register.component';
     HeaderComponent, 
     MovieCardComponent, 
     MaterialDemoComponent, 
-    MatNavbarComponent
+    MatNavbarComponent, FooterComponent
   ],
   imports: [
     BrowserModule,

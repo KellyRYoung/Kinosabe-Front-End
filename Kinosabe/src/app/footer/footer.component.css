@@ -1,0 +1,4 @@
+.links, .quote { 
+    flex-basis: 300px;  
+    flex-grow: 1; 
+}
