@@ -1,23 +1,26 @@
 <div class="flex-container">
-  <form id="login">
-    <mat-form-field>
-      <input type="text" matInput placeholder="Username" [formControl]="usernameFormControl">
-      <mat-error *ngIf="usernameFormControl.hasError('required')">
-        Username is required
-      </mat-error>
-    </mat-form-field>
-    
-
-    <br>  
-    <mat-form-field>
-        <input type="password" name="username" matInput placeholder="Password" [formControl]="passwordFormControl">
-        <mat-error *ngIf="passwordFormControl.hasError('required')">
-          Password is required
+  <mat-card id="login">
+    <form>
+      <div class="mat-headline">Login to your account:</div>
+      <mat-form-field>
+        <input type="text" matInput placeholder="Username" [formControl]="usernameFormControl">
+        <mat-error *ngIf="usernameFormControl.hasError('required')">
+          Username is required
         </mat-error>
       </mat-form-field>
-    <br>
-    <button mat-raised-button color="primary">Login</button>
-  </form>
+      <br>  
+      <mat-form-field>
+          <input type="password" name="username" matInput placeholder="Password" [formControl]="passwordFormControl">
+          <mat-error *ngIf="passwordFormControl.hasError('required')">
+            Password is required
+          </mat-error>
+        </mat-form-field>
+      <br>
+      <button mat-raised-button color="primary">Login</button>
+      <br>
+      <a href="./register" mat-button><span class="mat-caption">Register for a new account</span></a>
+    </form>
+  </mat-card>
 </div>
 
 <!-- <mat-form-field>
