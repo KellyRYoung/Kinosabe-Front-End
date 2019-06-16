@@ -52,7 +52,14 @@ mat-card {
     margin-bottom: 15px;
 }
 .comments-icon {
-    margin-right: 10px;
+    margin-right: 15px;
+}
+.genre, .year, .actor, .director {
+    margin: 0 5px;
+}
+mat-card-subtitle {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 /* @media screen and (min-width: 600) {

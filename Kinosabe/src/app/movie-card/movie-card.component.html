@@ -3,20 +3,23 @@
 
 <div class="flex-container">
 
-<mat-card role="group" tabindex="0">
+<mat-card *ngFor="let movie of movies" role="group" tabindex="0">
   <mat-card-title-group>
-    <mat-card-title>Batman</mat-card-title>
-    <mat-card-subtitle>1966 &nbsp;|&nbsp; comedy&nbsp; action&nbsp; superhero</mat-card-subtitle>
+    <mat-card-title>{{movie.title}}</mat-card-title>
+    <mat-card-subtitle>
+      <span class="year">{{movie.year}}</span>|
+      <span class="genre" *ngFor="let genre of (movie.genres | slice:0:4)">{{genre}}</span>
+    </mat-card-subtitle>
   </mat-card-title-group>
     <div class="movie-card-image-div">
-      <img class="mat-card-md-image" mat-card-md-image src="https://upload.wikimedia.org/wikipedia/en/thumb/6/69/Batman1966Poster.jpg/220px-Batman1966Poster.jpg">
+      <img *ngIf="movie.pictureUrl" class="mat-card-md-image" mat-card-md-image src="{{movie.pictureUrl}}">
     </div>
-    <mat-card-subtitle>Directed by: William Dozier</mat-card-subtitle>
-      <mat-card-subtitle>Starring: Adam West, Burt Ward, Lee Meriwether, Cesar Romero, Burgess Meredith, Frank Gorshin</mat-card-subtitle>
-    <mat-card-content>
-      For The First Time On The Motion Picture Screen In Color! Adam West as Batman and Burt Ward as Robin Together With All Their Fantastic Derring-Do And Their Dastardly Villians, Too!
+    <mat-card-subtitle *ngIf="movie.directors">Directed by: <span class="director" *ngFor="let director of (movie.directors | slice:0:4)">{{director}}</span></mat-card-subtitle>
+      <mat-card-subtitle *ngIf="movie.starring">Starring: <span class="actor" *ngFor="let star of (movie.starring | slice:0:4)">{{star}}</span></mat-card-subtitle>
+    <mat-card-content *ngIf="movie.description">
+      {{movie.description | slice:0:500}}
     </mat-card-content>
-    <mat-card-actions align="end"><mat-icon class="comments-icon" matBadge="3" matBadgePosition="below after" matBadgeColor="accent">chat_bubble_outline</mat-icon><button mat-raised-button color="primary">View More&nbsp;<mat-icon>arrow_forward</mat-icon></button></mat-card-actions>
+    <mat-card-actions align="end"><mat-icon class="comments-icon" matBadge="{{movie.comments.length}}" matBadgePosition="below after" matBadgeColor="accent">chat_bubble_outline</mat-icon><button mat-raised-button color="primary">View More&nbsp;<mat-icon>arrow_forward</mat-icon></button></mat-card-actions>
   </mat-card>
 
   
