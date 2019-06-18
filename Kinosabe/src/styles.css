@@ -76,3 +76,20 @@ input[type="text"]:hover, input[type="password"]:hover, input[type="email"]:hove
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+app-sidenav {
+    display: none;
+}
+
+@media screen and (max-width: 550px) {
+    app-mat-navbar {
+        display: none;
+    }
+    app-header {
+        display: none;
+    }
+    app-sidenav {
+        display: block;
+    }
+
+}

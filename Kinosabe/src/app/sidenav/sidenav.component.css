@@ -1,0 +1,24 @@
+mat-sidenav-container {
+    height: 100%;
+    display: block;
+}
+mat-sidenav, mat-sidenav-content {
+    padding: 16px;
+}
+
+mat-sidenav {
+    width: 40%;
+    min-width: 250px;
+}
+button {
+    
+}
+mat-toolbar {
+    justify-content: space-between;
+}
+
+@menu screen and (min-width: 551px) {
+    mat-sidenav-container {
+        display: none;
+    }
+}

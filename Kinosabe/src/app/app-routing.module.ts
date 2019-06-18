@@ -7,6 +7,7 @@ import { SearchResultsComponent } from './search-results/search-results.componen
 import { MovieCardComponent } from './movie-card/movie-card.component';
 import { MaterialDemoComponent } from './material-demo/material-demo.component';
 import { SimpleMovieCardComponent } from './simple-movie-card/simple-movie-card.component';
+import { SidenavComponent } from './sidenav/sidenav.component';
 
 const routes: Routes = [
   {path: "", component: HomeComponent},
@@ -18,6 +19,7 @@ const routes: Routes = [
   {path: "movie-card", component: MovieCardComponent},
   {path: "simple-movie-card", component: SimpleMovieCardComponent},
   {path: "material-demo", component: MaterialDemoComponent},
+  {path: "sidenav", component: SidenavComponent},
   {path: "**", component: ErrorComponent}
 ];
 

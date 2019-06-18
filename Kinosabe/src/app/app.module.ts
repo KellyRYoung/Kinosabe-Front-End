@@ -17,6 +17,7 @@ import { MaterialDemoComponent } from './material-demo/material-demo.component';
 import { MatNavbarComponent } from './mat-navbar/mat-navbar.component';
 import { SimpleMovieCardComponent } from './simple-movie-card/simple-movie-card.component';
 import { CommentCardComponent } from './comment-card/comment-card.component';
+import { SidenavComponent } from './sidenav/sidenav.component';
 
 
 @NgModule({
@@ -30,7 +31,7 @@ import { CommentCardComponent } from './comment-card/comment-card.component';
     HeaderComponent, 
     MovieCardComponent, 
     MaterialDemoComponent, 
-    MatNavbarComponent, SimpleMovieCardComponent, CommentCardComponent
+    MatNavbarComponent, SimpleMovieCardComponent, CommentCardComponent, SidenavComponent
   ],
   imports: [
     BrowserModule,
