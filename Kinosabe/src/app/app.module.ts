@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,10 +20,14 @@ import { RegisterComponent } from './register/register.component';
 import { FooterComponent } from './footer/footer.component';
 import { SimpleMovieCardComponent } from './simple-movie-card/simple-movie-card.component';
 import { CommentCardComponent } from './comment-card/comment-card.component';
+<<<<<<< HEAD
 import { MovieThumbnailComponent } from './movie-thumbnail/movie-thumbnail.component';
 import { PopularSearchesComponent } from './popular-searches/popular-searches.component';
 import { RecentCommentsComponent } from './recent-comments/recent-comments.component';
 
+=======
+import { SearchService } from './services/search.service';
+>>>>>>> 8c1a430a1d3a7a0074d06b3e0aea75113f8caafa
 
 @NgModule({
   declarations: [
@@ -36,8 +41,13 @@ import { RecentCommentsComponent } from './recent-comments/recent-comments.compo
     HeaderComponent, 
     MovieCardComponent, 
     MaterialDemoComponent, 
+<<<<<<< HEAD
     MatNavbarComponent, FooterComponent,
     MatNavbarComponent, SimpleMovieCardComponent, CommentCardComponent, MovieThumbnailComponent, PopularSearchesComponent, RecentCommentsComponent
+=======
+    MatNavbarComponent, SimpleMovieCardComponent, CommentCardComponent
+    
+>>>>>>> 8c1a430a1d3a7a0074d06b3e0aea75113f8caafa
   ],
   imports: [
     BrowserModule,
@@ -45,9 +55,10 @@ import { RecentCommentsComponent } from './recent-comments/recent-comments.compo
     FormsModule,
     BrowserAnimationsModule,
     MaterialModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [SearchService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
