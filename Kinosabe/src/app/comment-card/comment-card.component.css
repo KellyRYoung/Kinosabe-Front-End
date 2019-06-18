@@ -1,0 +1,8 @@
+example-card {
+    max-width: 400px;
+  }
+  
+  .example-header-image {
+    background-image: url('https://www.sccpre.cat/mypng/full/133-1337042_its-all-ogre-now-shrek-movie-poster-hd.png');
+    background-size: cover;
+  }

@@ -1,0 +1,12 @@
+.movie-thumbnail {
+    width: 200px;
+   border-radius: 5px;
+}
+
+.movie-thumbnail-poster {
+    width: 100%;
+}
+
+button {
+    width: 100%;
+}

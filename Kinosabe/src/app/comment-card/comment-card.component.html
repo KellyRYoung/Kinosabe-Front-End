@@ -1,3 +1,20 @@
-<p>
-  comment-card works!
-</p>
+<mat-card class="comment-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{ username }}</mat-card-title>
+      <mat-card-subtitle>Ogre</mat-card-subtitle>
+    </mat-card-header>
+  
+    <mat-card-content>
+      <p>
+       "That movie Shrek was amazing, and I am not just saying that because I am in it. Donkey was 
+       annoying at first but in the long run we became best friends. I got the girl, Princess Fiona! 
+       Gingy went back to the muffin man and now me and Donkey are gonna wake up in the morning after gazing 
+       at the stars tonight and make some waffles!""
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>

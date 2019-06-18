@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CommentCardComponent implements OnInit {
 
+  username = "Shrek"
+  
   constructor() { }
 
   ngOnInit() {

@@ -19,10 +19,14 @@ import { RegisterComponent } from './register/register.component';
 import { FooterComponent } from './footer/footer.component';
 import { SimpleMovieCardComponent } from './simple-movie-card/simple-movie-card.component';
 import { CommentCardComponent } from './comment-card/comment-card.component';
+import { MovieThumbnailComponent } from './movie-thumbnail/movie-thumbnail.component';
+import { PopularSearchesComponent } from './popular-searches/popular-searches.component';
+import { RecentCommentsComponent } from './recent-comments/recent-comments.component';
 
 
 @NgModule({
   declarations: [
+    RegisterComponent,
     AppComponent,
     LoginComponent, 
     HomeComponent, 
@@ -33,7 +37,7 @@ import { CommentCardComponent } from './comment-card/comment-card.component';
     MovieCardComponent, 
     MaterialDemoComponent, 
     MatNavbarComponent, FooterComponent,
-    MatNavbarComponent, SimpleMovieCardComponent, CommentCardComponent
+    MatNavbarComponent, SimpleMovieCardComponent, CommentCardComponent, MovieThumbnailComponent, PopularSearchesComponent, RecentCommentsComponent
   ],
   imports: [
     BrowserModule,

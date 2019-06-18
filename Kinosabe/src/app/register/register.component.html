@@ -1,3 +1,58 @@
-<p>
-  register works!
-</p>
+<div class="flex-container">
+    <mat-card id="login">
+      <form>
+        <div class="mat-headline">Register for a new account:</div>
+        <mat-form-field>
+          <input type="text" matInput placeholder="Username" [formControl]="usernameFormControl">
+          <mat-error *ngIf="usernameFormControl.hasError('required')">
+            Username is required
+          </mat-error>
+        </mat-form-field>
+        <br>  
+  
+  
+  
+  
+        
+        <mat-form-field>
+            <input type="password" name="username" matInput placeholder="Password" [formControl]="passwordFormControl">
+            <mat-error *ngIf="passwordFormControl.hasError('required')">
+              Password is required
+            </mat-error>
+          </mat-form-field>
+          <br>   
+          <mat-form-field>
+              <input matInput placeholder="Email" [formControl]="emailFormControl" name="email">
+              <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                Please enter a valid email address
+              </mat-error>
+              <mat-error *ngIf="emailFormControl.hasError('required')">
+                Email is required
+              </mat-error>
+            </mat-form-field>
+         <br>
+         <mat-form-field>
+            <input type="text" matInput placeholder="First name" [formControl]="firstnameFormControl">
+            <mat-error *ngIf="firstnameFormControl.hasError('required')">
+               First name is required
+            </mat-error>
+          </mat-form-field>
+          <br>  
+          <mat-form-field>
+              <input type="text" matInput placeholder="Last name" [formControl]="lastnameFormControl">
+              <mat-error *ngIf="lastnameFormControl.hasError('required')">
+               Last name is required
+              </mat-error>
+            </mat-form-field>
+            <br>  
+     <button mat-raised-button color="primary">Register</button>
+        <br>
+        <a href="./login" mat-button><span class="mat-caption">Login to an existing account</span></a>
+      </form>
+    </mat-card>
+  </div>
+  
+  <!--use the below for the email input in registration form -->
+
+
+
