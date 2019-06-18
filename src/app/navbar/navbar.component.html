@@ -37,7 +37,8 @@
     </div>
   </div>
   <div id="search-div">
-    <input id="search" type="text" placeholder="search" [(ngModel)]="name">
+    <input id="search" type="text" placeholder="search" >
+    <!-- [(ngModel)]="name" -->
   </div>
   <div id="nav-right">
     <img *ngIf="currentUserPicUrl" src="{{currentUserPicUrl}}" alt="{{currentUser.username}}'s profile picture'">
