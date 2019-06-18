@@ -55,7 +55,7 @@ export class MovieCardComponent implements OnInit {
       (
         data=>
         {
-          console.log("data: ");
+          console.log("ngOnInit in movie-card.component.ts: ");
           console.dir(data.Search);
           this.movies = data.Search;
           console.log("MOVIES: ");

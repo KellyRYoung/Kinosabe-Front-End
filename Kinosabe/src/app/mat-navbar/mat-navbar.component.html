@@ -13,8 +13,8 @@
 
   </div>
 
-    <input type="search" placeholder="search for movies" class="search">
-  
+    <input  type="search" placeholder="search for movies" class="search">
+  <!-- (keyup.enter)="goToSearch(search.value)" -->
   <div>
     <a href="./login" *ngIf="!this.loggedIn" mat-button>Login</a>
     <button mat-button [matMenuTriggerFor]="profileMenu" *ngIf="this.loggedIn">My Account</button>
