@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,7 +18,7 @@ import { MaterialDemoComponent } from './material-demo/material-demo.component';
 import { MatNavbarComponent } from './mat-navbar/mat-navbar.component';
 import { SimpleMovieCardComponent } from './simple-movie-card/simple-movie-card.component';
 import { CommentCardComponent } from './comment-card/comment-card.component';
-
+import { SearchService } from './services/search.service';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { CommentCardComponent } from './comment-card/comment-card.component';
     MovieCardComponent, 
     MaterialDemoComponent, 
     MatNavbarComponent, SimpleMovieCardComponent, CommentCardComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -38,9 +40,10 @@ import { CommentCardComponent } from './comment-card/comment-card.component';
     FormsModule,
     BrowserAnimationsModule,
     MaterialModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [SearchService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
